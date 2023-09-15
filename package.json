@@ -1,6 +1,6 @@
 {
   "name": "big-rational-ts",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "module": "index.ts",
   "type": "module",
   "main": "build/index.js",
@@ -15,5 +15,10 @@
   },
   "dependencies": {
     "big-integer": "^1.6.51"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicolasLuduena/BigRational.git"
+  },
+  "homepage": "https://github.com/nicolasLuduena/BigRational"
 }

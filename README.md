@@ -1,6 +1,6 @@
 # BigRational
 
-[![npm version](https://badge.fury.io/js/big-rational.svg)](https://badge.fury.io/js/big-rational)
+[![npm version](https://badge.fury.io/js/big-rational-ts.svg)](https://badge.fury.io/js/big-rational-ts)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A lightweight TypeScript library for representing and manipulating rational numbers using `bigint`. Rational numbers are numbers that can be expressed as the quotient of two integers (numerator/denominator).
@@ -18,11 +18,11 @@ A lightweight TypeScript library for representing and manipulating rational numb
 Install the package using npm:
 
 ```bash
-npm install big-rational
+npm install big-rational-ts
 ```
 ## Usage
 ```typescript
-import { BigRational } from 'big-rational';
+import { BigRational } from 'big-rational-ts';
 
 // Create rational numbers
 const r1 = new BigRational(3n, 4n);  // Represents 3/4

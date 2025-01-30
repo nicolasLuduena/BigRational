@@ -6,8 +6,8 @@ import { gcd } from "big-integer";
  * with two integers, a numerator `a` and a denominator `b` such as `b ≠ 0`.
  */
 export class BigRational {
-  private declare numerator: bigint;
-  private declare denominator: bigint;
+  declare private numerator: bigint;
+  declare private denominator: bigint;
 
   /**
    * Creates a BigRational object.
@@ -59,8 +59,7 @@ export class BigRational {
    */
   add(a: BigRational): BigRational {
     const [numerator, denominator] = a.toPair();
-    const resultingNumerator =
-      numerator * this.denominator + this.numerator * denominator;
+    const resultingNumerator = numerator * this.denominator + this.numerator * denominator;
 
     const resultingDenominator = this.denominator * denominator;
     return new BigRational(resultingNumerator, resultingDenominator);
@@ -98,10 +97,7 @@ export class BigRational {
    * @returns {BigRational} A new BigRational object representing the product of the two numbers.
    */
   mul(a: BigRational): BigRational {
-    return new BigRational(
-      a.numerator * this.numerator,
-      a.denominator * this.denominator
-    );
+    return new BigRational(a.numerator * this.numerator, a.denominator * this.denominator);
   }
 
   /**
@@ -159,8 +155,7 @@ export class BigRational {
     const [numerator, denominator] = a.toPair();
 
     const crossMultiplicationNegative =
-      (denominator > 0n && this.denominator < 0n) ||
-      (denominator < 0n && this.denominator > 0n);
+      (denominator > 0n && this.denominator < 0n) || (denominator < 0n && this.denominator > 0n);
 
     if (crossMultiplicationNegative) {
       return this.numerator * denominator >= numerator * this.denominator;
@@ -266,10 +261,7 @@ export class BigRational {
    * @returns {boolean} Returns true if the current BigRational number is positive, and false otherwise.
    */
   isPositive(): boolean {
-    return (
-      (this.numerator > 0n && this.denominator > 0n) ||
-      (this.numerator < 0n && this.denominator < 0n)
-    );
+    return (this.numerator > 0n && this.denominator > 0n) || (this.numerator < 0n && this.denominator < 0n);
   }
 
   /**
